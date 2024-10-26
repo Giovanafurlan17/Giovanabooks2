@@ -1,0 +1,117 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url(styles/topicos.css);
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
+
+
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+    --fonte-secundaria: "Josefin Sans";
+    --preto: #000000;
+    --cinza: #474646;
+    --cinza-claro: #858585;
+  }
+  
+  .carrossel_titulo {
+      color: var(--laranja);
+      background-color: var(--branco);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 1em 0 0.5em 0;
+  }
+  
+  .swiper-slide img {
+      width: 100%; /* Corrige o problema das imagens sobrepostas */
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+      display: none; /* Remove as setas do carrossel */
+  }
+  
+  .swiper-pagination {
+      position: initial; /* Define a posição da paginação */
+      margin: .5em 0; /* Define a margem da paginação */
+  }
+  
+  .card {
+      background: var(--branco);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      margin: 1em;
+      padding: 1em;
+  }
+  
+  .card__descrição {
+      display: flex;
+      justify-content: space-between; /* Alinha as colunas da descrição e da imagem */
+  }
+  
+  .descrição__titulo {
+      color: var(--laranja);
+      font-weight: 700;
+  }
+  
+  .descrição__titulo-livro {
+      color: var(--azul);
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0.5em 0; /* Adiciona margem abaixo do título do livro */
+  }
+  
+  .descrição__texto {
+      font-size: 14px; /* Tamanho do texto da descrição */
+  }
+  
+  .card__botões {
+      display: flex;
+      justify-content: space-between; /* Alinha os botões */
+  }
+  
+  .botões {
+      display: flex; /* Exibe os botões lado a lado */
+      justify-content: space-between;
+  }
+  
+  .botões__item {
+      margin-right: 0.5em; /* Espaçamento entre os botões */
+  }
+  .cabeçalho__menu-hamburguer {
+    display: none; /* Mantém o botão do menu hamburguer invisível */
+}   
+  
+.opções {
+    display: flex;
+    justify-content: center; /* Centraliza as opções horizontalmente */
+    align-items: center; /* Alinha verticalmente no centro */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.opções_item {
+    padding: 0 1.5em; /* Aumente o padding lateral se necessário */
+}
+
+.lista-categorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--branco);
+    width: 200px;
+}
+
+/* Exibir o menu quando o checkbox estiver marcado */
+.opções__botao:checked ~ .lista-categorias {
+    display: block;
+}
+

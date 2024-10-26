@@ -1,0 +1,184 @@
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: #002f52;
+    --fonte-secundario: "Josefin Sans";
+    --preto: #000000; /* Nova variável de cor */
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em; /* Adiciona espaçamento interno ao cabeçalho */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo do cabeçalho */
+    flex: 1; /* Faz o container ocupar todo o espaço disponível */
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.container__icones {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-left: auto; /* Empurra os ícones para a direita */
+    margin-right: 30px; /* Ajuste este valor conforme necessário */
+    align-items: center; /* Centraliza verticalmente os ícones */
+}
+
+.opções {
+    display: none; /* Oculta a lista de opções por padrão */
+}
+
+.opções_item {
+    padding: 0 1em;
+    text-transform: uppercase;
+    position: relative; /* Necessário para posicionar a lista de categorias */
+}
+
+.opções__link {
+    text-decoration: none;
+    color: var(--laranja);
+}
+
+/* Estilo da lista de categorias removido */
+.lista-menu {
+    display: none; /* Esconde a lista de categorias inicialmente */
+    position: absolute;
+    top: 100%;
+    background-color: transparent; /* Removido fundo branco */
+    width: auto; /* Largura automática para que não apareça uma caixa */
+    z-index: 10; /* Garante que a lista apareça acima de outros elementos */
+}
+
+/* Exibir o menu quando o checkbox estiver marcado */
+.opções__botão:checked + label + .lista-menu {
+    display: block; /* Exibe a lista de categorias quando o checkbox estiver marcado */
+}
+
+.carrossel__titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.banner__pesquisa {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+/* Estilizando o placeholder */
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+    background: url("../img/Lupa.svg") no-repeat;
+    background-position: 1em;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: .5em 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    /* Estilizando a lista de opções em telas maiores */
+    .opções {
+        display: flex; /* Configura a lista de categorias para ser exibida em linha horizontal */
+    }
+
+    .opções_item {
+        padding: 0 1em; /* Ajustando o espaçamento */
+        text-transform: uppercase; /* Mantendo a formatação do texto */
+    }
+
+    .opções__link {
+        text-decoration: none; /* Remove a formatação padrão dos links */
+        color: var(--preto); /* Adiciona a cor preta aos links */
+    }
+
+    .opções__botão {
+        display: none; /* Oculta o botão em telas maiores */
+    }
+
+    .container__imagem-transparente {
+        display: none; /* Oculta o ícone de favoritos em telas maiores */
+    }
+
+    .cabeçalho__menu-hamburguer {
+        display: none; /* Oculta o menu hambúrguer em telas maiores */
+    }
+
+    .opções_botão {
+        display: none;
+    }
+}
+

@@ -1,0 +1,56 @@
+hr {
+    margin: 0;
+}
+
+.rodapé {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.lista-rodapé {
+    display: none; /* Escondendo a lista de rodapé para telas menores */
+    
+}
+
+
+@media screen and (min-width: 1024px) {
+    .rodapé {
+        display: flex;
+        justify-content: space-around; /* Espaçamento igual entre os itens */
+    }
+
+    .lista-rodapé {
+        display: block; /* Mostrando a lista de rodapé em telas maiores */
+    }
+
+    .lista-rodapé__item {
+        display: flex;
+        align-items: center; /* Alinhando texto e ícone verticalmente */
+        margin: 0.6em 0; /* Margem em cima e embaixo dos itens da lista */
+    }
+
+    .lista-rodapé__link {
+        color: var(--cinza); /* Aplicando a cor da variável para os links */
+        text-decoration: none; /* Removendo o sublinhado dos links */
+        margin-left: 0.6em; /* Margem à esquerda do link para espaçamento */
+    }
+
+    .lista-rodapé__titulo {
+        font-size: 14px; /* Tamanho da fonte para os títulos */
+        color: var(--cinza-claro); /* Aplicando a cor da variável para os títulos */
+    }
+
+    .rodapé-titulo {
+        font-size: 24px; /* Tamanho da fonte para o título do rodapé */
+    }
+}
+.rodapé__titulo {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte. Você pode ajustar este valor conforme necessário */
+}
+
+@media screen and (min-width: 1728px) {
+    .lista-rodapé {
+        border-left: 1px solid var(--cinza);
+        padding-left: 1em
+    }
+}
